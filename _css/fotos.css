@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+ul#album-fotos{														/*Aq será editado tudo que estiver dentro da área da tag ul*/
+	width: 700px;													/*essa área terá uma altura de 700px*/
+	margin: 0 auto;													/*terá uma margem zero em cima e automática nos outros lados*/
+	padding: 50px;													/*terá uma margem interna de 50px*/
+	overflow: hidden;
+	list-style: none;												/*a lista não terá nenhum estilo*/
+}
+
+ul#album-fotos li{													/*Aq serão editados todos os lis que estiverem dentro da área da tag ul*/
+	float: left;													/*colocando uma flutuação a esquerda fará com que cada item da lista fique um do lado do outro*/
+	width: 200px;													/*cada li da lista terá uma altura e uma largura de 200 x 200*/
+	height: 200px;
+	margin: 10px;
+	border: 5px solid #ffffff;										/*cada item terá uma borda de grossura igual a 5px, do tipo solida e da cor branca*/
+	background-color: #ffffff;										/*a cor de fundo de cada item será branca*/
+	box-shadow: 1px 1px 3px rgba(0,0,0,.4);							/*cada item terá uma sombra com deslocamento lateral de 1px, deslocamento vertical de 1px, espalhamento de 3px e com uma cor preta com 40% de nitidez*/
+	-webkit-transition: all 0.4s ease-in;							/*Para criar um efeito de transição, você deve especificar duas coisas: a propriedade CSS à qual você deseja adicionar um efeito e a duração do efeito. O ease-in especifica um tipo de transição com início lento.*/
+}
+
+ul#album-fotos li:hover{											/*Aq será editado tudo que vai acontecer quando o mouse estiver sobre qualquer item da lista*/
+	-webkit-transform: scale(1.5);									/*Essa propriedade permite girar, dimensionar, mover, inclinar etc., elementos. Nesse caso, vamos dimensionar o conteúdo que está dentro de cada li quando o mouse passar por cima*/
+}
+
+ul#album-fotos li span{												/*aq será editado cada span que está dentro de cada item da lista*/
+	opacity: 0;														/*colocamos uma opacidade mínima pois queremos que ela apareça somente quando o mouse passar sobre o item da lista correspondente*/
+	color: #ffffff;													/*as letras terão cor branca*/
+	text-shadow: 1px 1px 1px #000000;								/*os textos terão uma sombra com 1px de deslocamento lateral, 1px de deslocamento vertical, 1px de espalhamento e da cor preta*/
+	background-color: rgba(0,0,0,.3);								/*a cor de fundo da área delimitada pela tag span terá uma cor preta com 30% de nitidez*/
+	font-size: 9pt;													/*o tamanho da fonte das letras será de 9pontos*/
+	line-height: 370px;												/*a largura entre as linhas é de 370px. Isso fará com que o conteúdo que está dentro da tag span vá para a parte inferior da área delimitada pela tag li*/
+	padding: 5px;													/*a margem interna será de 5px*/
+}
+
+ul#album-fotos li:hover span{										/*aq será editado tudo que acontecer com o conteúdo que está dentro da tag span quando o mouse passar sobre a área da tag li*/
+	opacity: 1;														/*quando o mouse passar sobre a área delimitada pela tag li, a opacidade do conteúdo span correspondente volta a ser máxima*/
+}
+
+ul#album-fotos li#foto01{											/*aq será editado somente o conteúdo que estiver dentro da tag li com o id="foto01"*/
+	background: url("../_imagens/galeria-01.jpg") no-repeat;		/*colocamos uma foto específica para ocupar o fundo da área delimitada pela #foto01, sem repetição*/
+	background-position: 50% 50%;									/*A background-position define a posição inicial de uma imagem de plano de fundo. Por padrão, uma imagem de plano de fundo é colocada no canto superior esquerdo de um elemento e repetida vertical e horizontalmente. O valor padrão é 0% 0%, mas como queremos que mostre o centro, colocamos 50% 50%*/
+	background-size: 400px 400px;									/*A background-size especifica o tamanho das imagens de fundo. Nesse caso, colocamos uma altura e uma largura bem grande para que a imagem não fique totalmente exposta quando dentro da área delimitada pelo li, e mostre toda somente quando o mouse estiver sobre a imagem e a área for redimensionada, como foi definido anteriormente */
+	background-color: #ffffff;
+}
+
+ul#album-fotos li#foto01:hover{										/*aq será editado tudo que vai acontecer quando o mouse estiver sobre a área correspondente da lista com id="foto01"*/
+	background-position: 0px 0px;									/*Quando o mouse estiver sobre essa área, a posição da imagem de fundo voltará a ser padrão*/
+	background-size: 200px 200px;									/*Quando o mouse estiver sobre essa área, a imagem terá as mesmas dimenções da área definida para as lis*/
+}
+
+ul#album-fotos li#foto02{											/*aq será editado somente o conteúdo que estiver dentro da tag li com o id="foto02"*/
+	background: url("../_imagens/galeria-02.jpg") no-repeat;
+	background-position: 50% 50%;
+	background-size: 400px 400px;
+	background-color: #ffffff;
+}
+
+ul#album-fotos li#foto02:hover{										/*aq será editado tudo que vai acontecer quando o mouse estiver sobre a área correspondente da lista com id="foto02"*/
+	background-position: 0px 0px;
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto03{											/*aq será editado somente o conteúdo que estiver dentro da tag li com o id="foto03"*/
+	background: url("../_imagens/galeria-03.jpg") no-repeat;
+	background-position: 50% 50%;
+	background-size: 400px 400px;
+	background-color: #ffffff;
+}
+
+ul#album-fotos li#foto03:hover{										/*aq será editado tudo que vai acontecer quando o mouse estiver sobre a área correspondente da lista com id="foto03"*/	
+	background-position: 0px 0px;
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto04{											/*aq será editado somente o conteúdo que estiver dentro da tag li com o id="foto04"*/
+	background: url("../_imagens/galeria-04.jpg") no-repeat;
+	background-position: 50% 50%;
+	background-size: 400px 400px;
+	background-color: #ffffff;
+}
+
+ul#album-fotos li#foto04:hover{										/*aq será editado tudo que vai acontecer quando o mouse estiver sobre a área correspondente da lista com id="foto04"*/
+	background-position: 0px 0px;
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto05{											/*aq será editado somente o conteúdo que estiver dentro da tag li com o id="foto05"*/
+	background: url("../_imagens/galeria-05.jpg") no-repeat;
+	background-position: 50% 50%;
+	background-size: 400px 400px;
+	background-color: #ffffff;
+}
+
+ul#album-fotos li#foto05:hover{										/*aq será editado tudo que vai acontecer quando o mouse estiver sobre a área correspondente da lista com id="foto05"*/
+	background-position: 0px 0px;
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto06{											/*aq será editado somente o conteúdo que estiver dentro da tag li com o id="foto06"*/
+	background: url("../_imagens/galeria-06.jpg") no-repeat;
+	background-position: 50% 50%;
+	background-size: 400px 400px;
+	background-color: #ffffff;
+}
+
+ul#album-fotos li#foto06:hover{										/*aq será editado tudo que vai acontecer quando o mouse estiver sobre a área correspondente da lista com id="foto06"*/
+	background-position: 0px 0px;
+	background-size: 200px 200px;
+}

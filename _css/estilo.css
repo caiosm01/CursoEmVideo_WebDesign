@@ -1,0 +1,255 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@font-face {
+	font-family: 'FonteLogo';
+	src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body{
+	font-family: Arial, sans-serif;
+	background-color: #dddddd;				/*Aq será editado tudo que fica dentro da tag body*/
+	color: rgba(0, 0, 0, 1);
+}
+
+div#interface {									/*Aq será editado tudo que está dentro do div com id=interface, ou seja, nesse caso, todo o conteúdo da tag body*/
+	width: 950px;
+	background-color: #ffffff;					/*O parâmetro margin define a margem externa, nesse caso, do corpo da página que está dentro do id interface*/
+	margin: -20px auto 0px auto;				/*em cima, direita, baixo e esquerda; essa é a ordem de definição da margem*/
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);	/*sombra na borda;1°-deslocamento para a direita; 2°-deslocamento para baixo; 3°-espalhamento da sombra; 4°-cor da sombra*/
+	padding: 10px 10px 10px 10px;				/*define a margem interna. Em cima, direita, baixo e esquerda; essa é a ordem de definição da margem*/
+	
+}
+
+p{												/*aq será editado todos os parágrafos da página*/
+	text-align: justify;						/*Determinamos que todos os parágrafos terão um alinhamento justificado e uma identação de 50pixels no início de cada parágrafo.*/
+	text-indent: 50px;
+}
+
+a{												/*aq será editado todos os links; aqueles com ; os links do menu foram especificados e editados de forma diferente*/
+	color: #606060;
+	text-decoration: none;
+}
+
+a:hover{										/*quando o mouse passar pelos links, eles ficarão sublinhados*/
+	text-decoration: underline;
+}
+
+header#cabecalho img#icone{						/*Aq será editado a imagem que está dentro da tag header, dentro da tag img com id=icone*/
+	position: absolute;							/*Sua posição será absoluta para que possa flutuar na página*/
+	left: 970px;
+	top: 70px;
+}
+
+header#cabecalho{															/*Aq será editado todo o conteúdo dentro da tag header com id=cabecalho*/
+	border-bottom: 1px #606060 solid;										/*edita a linha de baixo da borda da área do cabeçalho; espessura da borda, cor, tipo de borda*/
+	height: 150px;															/*Altura do cabeçalho*/
+	background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;	/*define o fundo da área do cabeçalho; imagem de fundo, não repetir, deslocamento lateral, deslocamento vertical.*/
+}
+
+header#cabecalho h1{								/*Aq será editado todos os h1s que estejam no id=cabecalho*/
+	font-family: 'FonteLogo', sans-serif;					/*fonte da letra*/
+	font-size: 30pt;								/*Tamanho da letra*/
+	color: #606060;									/*cor da letra*/
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);		/*sombra do texto;1°-deslocamento para a direita; 2°-deslocamento para baixo; 3°-espalhamento da sombra; 4°-cor da sombra*/
+	padding: 0px;
+	margin-bottom: 0px;								/*margem de baixo*/
+}
+
+header#cabecalho h2{								/*Aq será editado todos os h2s que estejam no id=cabecalho*/
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 15pt;
+	color: #888888;
+	padding: 0px;
+	margin-top: 0px;								/*margem de cima*/
+}
+
+/*Formatação de imagens com legenda*/
+figure.foto-legenda{						 /*aq será editado tudo que fica dentro da classe foto-legenda, que é tudo que está dentro da tag figure*/
+	position: relative;						 /*a posição é relativa a posição da tag que ela está dentro.*/
+	border: 8px solid white;				 /*vai criar uma borda em torno de tudo que estiver na classe foto-legenda*/
+	box-shadow: 1px 1px 4px black;  		 /*sombra na borda;1°-deslocamento para a direita; 2°-deslocamento para baixo; 3°-espalhamento da sombra; 4°-cor da sombra*/
+}
+
+figure.foto-legenda img{					 /*aq será editado tudo que fica dentro tag img que está na classe foto-legenda*/	
+	width: 100%;							 /*nesse caso, colocamos para que a altura e a largura ocupe 100% da caixa criada para a classe foto-legenda */
+	height: 100%;
+}
+
+figure.foto-legenda figcaption{					/*aq será editado tudo que fica dentro da tag figcaption da classe foto-legenda*/
+	opacity: 0;									/*Nesse caso, a opacidade da legenda, jutamente com o seu fundo escuro ficaram zerados e o conteúdo configurado aqui só aparecerá quando o mause passar por cima, graças a função seguinte*/
+	position: absolute;							/*como essa função é 'filha' da função figure.foto-legenda, a sua posiçaão será absoluta com relação a posição da função principal*/
+	top: 0px;									/*fará com que tudo que está na tag figcaption fique no topo*/
+	background-color: rgba(0, 0, 0, 0.4);		/*a cor do fundo da área da legenda*/
+	color: white;								/*cor da letra*/
+	width: 100%;								/*fará com que a altura e largura do fundo da legenda ocupe 100% da caixa criada na função figure.foto-legenda*/
+	height: 100%;
+	padding: 10px;								/*faz com que a área destinada para a legenda vá 10px para dentro e 10px para baixo*/
+	box-sizing: border-box;
+	transition: opacity 1s;						/*faz com que a transição de mostrar leve 1 segundo*/
+}
+
+figure.foto-legenda:hover figcaption{		/*:hover vai disparar uma classe específica quando o mouse passar por cima*/
+	opacity: 1;								/*Nesse caso, quando o mause passar sobre a imagem, fará com que essa imagem volte*/
+}											/*a opacidade da legegenda-do figcaption-100%, que tinha sido tirada.*/
+
+/*Formatação de menu*/
+nav#menu{
+	display: block;		/*para podermos movimentar o menu pela tela, precisamos defini-lo como um bloco*/
+}
+
+nav#menu ul{								/*aq será editado tudo que estiver dentro da tag ul que está dentro do id menu*/
+	list-style: none;						/*tira qualquer tipo de marcação da minha lista, nesse caso, tirou as bolinhas antes de cada item*/
+	text-transform: uppercase;				/*transforma todas as letras em maiúsculo*/
+	position: absolute;						/*a posição é absoluta para podermos move-la pela página*/
+	top: -20px;
+	left: 350px;
+}
+nav#menu li{									/*aq será editado tudo que estiver dentro da tag li que está dentro do id menu*/
+	display: inline-block;						/*faz com que os itens da lista fiquem um do lado do outro*/
+	background-color: #dddddd;				
+	padding: 10px;								/*o padding controla a dimenção dentro da área de cada item li*/
+	margin: 2px;								/*o margin controla a dimenção fora da áreade cadem item li*/
+	-webkit-transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	-ms-transition: background-color 1s;
+	-o-transition: background-color 1s;
+	transition: background-color 1s;
+}
+nav#menu li:hover{						/*Aq será editado tudo que estiver dentro do id=menu, somente quando o mause passar por cima*/
+	background-color:#606060;
+}
+nav#menu h1{							/*Aq será editado todos os h1s que estiverem no id=menu*/
+	display: none;						/*nesse caso, estamos fazendo com que o conteúdo aq dentro não apareça na tela, porem ele continua com idetificação*/
+}
+
+nav#menu a{								/*Aq será editado todos os links que estiverem no dentro da teg nav com id=menu*/
+	color: #000000;
+	text-decoration: none;				/*Aq retiramos qualquer decoração do link, que nó caso é o underline*/
+}
+
+nav#menu a:hover{						/*quando o mouse estiver em cima do link que estiver dentro do id=menu, sua cor mudará de preto para branco*/
+	color: #ffffff;
+}
+
+section#corpo{							/*aq será editado tudo que estiver dentro da id=corpo*/
+	display: block;						/*colocamos essa seção como bloco para que pudéssemos move-la dentro de sua área delimitada*/
+	width: 580px;						/*sua largura não ocupará a página inteira pois vamos colocar o conteudo da tag aside ao lado*/
+	float: left;
+	border-right: 1px #606060 solid;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+article#noticia-principal h2{			/*aq será editado todos os h2s que estiver dentro da tag article que tem id=noticia-principal*/
+	font-size: 13pt;
+	color: #606060;
+	background-color: #dddddd;
+	padding: 5px 0px 5px 10px;
+	margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1{						/*aq será editado todos os h1s que estão dentro da header que tem id=cabecalho-artigo*/
+	font-family: 'FonteLogo', sans-serif;		/*como se trata de um cabeçalho secundário, podemos colocar sua fonte igual ao do cabeçalho principal*/
+	font-size: 20pt;								
+	color: #606060;									
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);		
+	padding: 0px;
+	margin-bottom: -5px;	
+	margin-top: 10px;
+}
+
+h3.direita{										/*aq será editado unicamente o h3 que tem a class=direita que esta dento do cabeçalho do artigo*/
+	text-align: right;
+}
+
+header#cabecalho-artigo h2{						/*aq será editado todos os h2s que estão dentro da header que tem id=cabecalho-artigo*/
+	font-size: 13pt;
+	color: #cecece;
+	background-color: #ffffff;
+	padding: 0px;
+	margin: 10px;
+}
+
+header#cabecalho-artigo h3{						/*aq será editado todos os h13s que estão dentro da header que tem id=cabecalho-artigo*/
+	font-size: 12px;
+	color: #cecece;
+	padding: 1px;
+	margin: 0px;
+}
+
+table#tabelaspec{								/*aq será editada a tabela que tem um id=tabelaspec*/
+	border: 1px solid #606060;
+	border-spacing: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table#tabelaspec td{							/*aq será editado cada cédula da tabela que tem id=tabelaspec*/
+	border: 1px solid #606060;
+	padding: 10px;
+	text-align: center;
+	vertical-align: top;
+}
+
+table#tabelaspec td.ce{							/*aq será editado toda classe ce(coluna da esquerda) da tabela*/
+	color: #ffffff;
+	background-color: #606060;
+	text-align: right;
+	font-weight: bold;
+}
+
+table#tabelaspec td.cd{							/*aq será editado toda classe cd(coluna da direita) da tabela*/
+	background-color: #cecece;
+	text-align: left;
+}
+
+table#tabelaspec caption{						/*aq será editado o título da tabela*/
+	color: #888888;
+	font-size: 13pt;
+	font-weight: bolder;
+}
+
+table#tabelaspec caption span{					/*aq será editado unicamente a parte que está dentro da tag span no título da tabela*/
+	display: block;
+	float: right;
+	color: #000000;
+	font-size: 8pt;
+	margin-top: 10px;
+}
+
+aside#lateral{									/*aq será editado todo o conteudo que fica na lateral da página*/
+	display: block;
+	width: 350px;
+	float: right;
+	box-sizing: border-box;
+	padding: 10px;
+	margin-top: 10px;
+	margin-right: 5px;
+	background-color: #dddddd;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+	
+}
+
+aside#lateral h1{								/*aq serão editados todos os h1s da parte lateral da página*/
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 20pt;
+	color: #606060;
+	margin-top: 10px;
+}
+
+aside#lateral h2{								/*aq serão editados todos os h2s da parte lateral da página*/
+	background-color: #606060;
+	font-size: 13pt;
+	color: #ffffff;
+	padding: 5px 0px 5px 10px;
+	
+}
+
+footer#rodape{									/*aq será editado todo o conteúdo do rodapé da página*/
+	clear:both;									/*faz com que o conteúdo editado no section e no aside não influencie na posição do rodapé*/
+	border-top: 1px #606060 solid;				/*cria uma linha de divisão acima*/
+}
+
+footer#rodape p{								/*aq será editado o parágrafo do rodapé*/
+	text-align: center;
+}
